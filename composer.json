@@ -1,0 +1,22 @@
+{
+    "name": "mr-arsal4u/spatie_spice",
+    "description": "A custom package with config files, views, JS, seeders, migrations, and models.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MrArsal4u\\StripeSpice\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MrArsal4u\\StripeSpice\\SpatieSpiceServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    }
+}

@@ -5,23 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Spatie</title>
+    <title>Permissions</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .container-custom {
+            max-width: 80%;
+            margin-top: 20px;
+        }
+
+        .card {
+            margin: 10px 0;
+        }
+
+        .module-checkbox,
+        .permission-checkbox,
+        .subModule-checkbox,
+        .subSubModule-checkbox {
+            margin-right: 10px;
+        }
+
+        .ps-3 {
+            padding-left: 15px;
+        }
+
+        .ml-3 {
+            margin-left: 15px;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="mx-auto p-2" style="width: 200px;">
-    <h1>
-        <a href="#" class="btn btn-primary">Back</a>
-    </h1>
-</div>
-    <div class="container-sm mt-5" style="width: 800px">
+
+    <div class="container-fluid container-custom">
         <div class="row justify-content-center" id="main_form">
             <div class="col-md-12 myTab">
                 <div class="page-header">
                     <div class="costumer-detail card">
-                        <div class="card-header">Assign Permissions</div>
+                        <div class="card-header">Assign Permissions
+                        </div>
+
                         <div class="card-body p-4">
                             <form id="permissions_assignment_form">
                                 <div class="form-group pb-4">
@@ -48,10 +75,10 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div class="row ms-3">
+                                            <div class="row ml-3">
                                                 @if ($module->subModules->count() > 0)
                                                     @foreach ($module->permissions as $permission)
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-6">
                                                             <div class="ps-3">
                                                                 <label
                                                                     class="d-flex align-items-center flex-heading mb-2"><input
@@ -66,7 +93,7 @@
                                                         </div>
                                                     @endforeach
                                             </div>
-                                            <div class="row ms-3">
+                                            <div class="row ml-3">
                                                 @foreach ($module->subModules as $subModule)
                                                     <div class="col-md-12 ml-3">
                                                         <div class="ps-3">
@@ -80,10 +107,10 @@
                                                             </label>
                                                         </div>
                                                     </div>
-                                                    <div class="row ms-3">
+                                                    <div class="row ml-3">
                                                         @if ($subModule->subModules->count() > 0)
                                                             @foreach ($subModule->permissions as $permission)
-                                                                <div class="col-md-4">
+                                                                <div class="col-md-6">
                                                                     <div class="ps-3">
                                                                         <label
                                                                             class="d-flex align-items-center flex-heading mb-2"><input
@@ -99,7 +126,7 @@
                                                                 </div>
                                                             @endforeach
                                                     </div>
-                                                    <div class="row ms-3">
+                                                    <div class="row ml-3">
                                                         @foreach ($subModule->subModules as $subSubModule)
                                                             <div class="col-md-12 ml-3">
                                                                 <div class="ps-3">
@@ -114,9 +141,9 @@
                                                                     </label>
                                                                 </div>
                                                             </div>
-                                                            <div class="row ms-3">
+                                                            <div class="row ml-3">
                                                                 @foreach ($subSubModule->permissions as $permission)
-                                                                    <div class="col-md-4">
+                                                                    <div class="col-md-6">
                                                                         <div class="ps-3">
                                                                             <label
                                                                                 class="d-flex align-items-center flex-heading mb-2"><input
@@ -136,7 +163,7 @@
                                                         @endforeach
                                                     @else
                                                         @foreach ($subModule->permissions as $permission)
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-6">
                                                                 <div class="ps-3">
                                                                     <label
                                                                         class="d-flex align-items-center flex-heading mb-2"><input
@@ -156,7 +183,7 @@
                                         @endforeach
                                     @else
                                         @foreach ($module->permissions as $permission)
-                                            <div class="col-md-4">
+                                            <div class="col-md-6">
                                                 <div class="ps-3">
                                                     <label class="d-flex align-items-center flex-heading mb-2"><input
                                                             type="checkbox"
@@ -175,7 +202,7 @@
                         </div>
                         <br /><br />
                         <div class="d-flex justify-content-end pt-3">
-                            <button type="button" class="btn btn-success assign-permission-btn">Save</button>
+                            <button type="button" class="btn btn-save assign-permission-btn">Save</button>
                         </div>
                         </form>
                     </div>
@@ -184,12 +211,12 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="{{ asset('permission.js') }}"></script>
+    <script src="{{ asset('js/permission.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+
 </body>
 
 </html>

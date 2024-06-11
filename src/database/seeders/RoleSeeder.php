@@ -14,14 +14,17 @@ class RoleSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0');
         DB::table('roles')->truncate();
         $roles = array(
             array('name' => IUserRole::SUPER_ADMIN, 'guard_name' => 'web', 'created_at' => Carbon::now()),
-            array('name' => IUserRole::Admin, 'guard_name' => 'web', 'created_at' => Carbon::now()),
-            array('name' => IUserRole::User, 'guard_name' => 'web', 'created_at' => Carbon::now()),
+            array('name' => IUserRole::PRODUCT_ADMIN, 'guard_name' => 'web', 'created_at' => Carbon::now()),
+            array('name' =>  IUserRole::PARTNER_ADMIN, 'guard_name' => 'web', 'created_at' => Carbon::now()),
+            array('name' => IUserRole::CUSTOMER, 'guard_name' => 'web', 'created_at' => Carbon::now()),
+            array('name' => IUserRole::HOD, 'guard_name' => 'web', 'created_at' => Carbon::now()),
+            array('name' =>  IUserRole::MANAGER, 'guard_name' => 'web', 'created_at' => Carbon::now()),
         );
         DB::table('roles')->insert($roles);
     }

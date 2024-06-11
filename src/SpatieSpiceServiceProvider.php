@@ -25,8 +25,8 @@ class SpatieSpiceServiceProvider extends ServiceProvider
 
         // Publish interfaces
         $this->publishes([
-            __DIR__ . '/Interfaces' => app_path('Interfaces'),
-        ], 'spatie-spice-interfaces');
+            __DIR__ . '/Contracts' => app_path('Contracts'),
+        ], 'spatie-spice-Contracts');
 
         // Publish migrations
         $this->publishes([
@@ -48,7 +48,7 @@ class SpatieSpiceServiceProvider extends ServiceProvider
             __DIR__ . '/views' => resource_path('views'),
             __DIR__ . '/Models' => app_path('Models'),
             __DIR__ . '/Public/js' => public_path('js'),
-            __DIR__ . '/Interfaces' => app_path('Interfaces'),
+            __DIR__ . '/Contracts' => app_path('Contracts'),
             __DIR__ . '/database/migrations' => database_path('migrations'),
             __DIR__ . '/database/seeders' => database_path('seeders'),
             __DIR__ . '/config' => config_path(),

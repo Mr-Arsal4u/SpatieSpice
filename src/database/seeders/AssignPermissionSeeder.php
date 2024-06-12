@@ -1,15 +1,12 @@
 <?php
 
-namespace App\Database\Seeders;
+namespace Database\Seeders;
 
 
 
-use Carbon\Carbon;
-use App\Models\Permission;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
 use Symfony\Component\VarDumper\VarDumper;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class AssignPermissionSeeder extends Seeder
 {
@@ -79,7 +76,7 @@ class AssignPermissionSeeder extends Seeder
             }
             return false;
         }
-    }
+    
         if (is_array($array)) {
             foreach ($array as $value) {
                 if (is_array($value))

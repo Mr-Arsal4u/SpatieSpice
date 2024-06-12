@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Database\Seeders;
+namespace Database\Seeders;
+
 
 
 

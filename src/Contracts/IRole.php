@@ -1,6 +1,6 @@
 <?php
 
-namespace MrArsal4u\StripeSpice\Interfaces;
+namespace App\Contracts;
 
 interface IRole
 {

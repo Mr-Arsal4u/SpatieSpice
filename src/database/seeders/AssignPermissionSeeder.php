@@ -1,6 +1,7 @@
 <?php
 
-namespace MrArsal4u\StripeSpice\Seeders;
+namespace App\Database\Seeders;
+
 
 
 use Carbon\Carbon;

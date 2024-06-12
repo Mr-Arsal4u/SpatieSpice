@@ -1,9 +1,7 @@
 <?php
 
-namespace MrArsal4u\StripeSpice\Interfaces;
+namespace App\Contracts;
 
-
-use App\Models\Visitor;
 
 interface IPermissions
 {

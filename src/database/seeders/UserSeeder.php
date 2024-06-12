@@ -1,16 +1,12 @@
 <?php
-namespace MrArsal4u\StripeSpice\Seeders;
+
+namespace App\Database\Seeders;
+
 
 
 use App\Models\User;
-use App\Models\Product;
-use App\Contracts\IRoles;
-use App\Contracts\IUserRole;
-use App\Helpers\GeneralHelper;
-use App\Models\PartnerCompany;
+use App\Contracts\IRole;
 use Illuminate\Database\Seeder;
-use App\Models\VerificationMethod;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Symfony\Component\VarDumper\VarDumper;
 
@@ -24,7 +20,7 @@ class UserSeeder extends Seeder
     public function run()
     {
         $super_admin  =   User::create($this->_createSuperAdmin());
-        $super_admin->assignRole(IUserRole::SUPER_ADMIN);
+        $super_admin->assignRole(IRole::SUPER_ADMIN);
         VarDumper::dump("Role super admin create :: Super Admin");
     }
 

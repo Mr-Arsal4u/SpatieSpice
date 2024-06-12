@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Contracts;
+use App\Contracts\IUserPermissions;
+use App\Contracts\IPermissionModules;
 
-use MrArsal4u\StripeSpice\Interfaces\IModule;
-use MrArsal4u\StripeSpice\Interfaces\IPermissions;
 
 
 

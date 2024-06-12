@@ -1,14 +1,12 @@
 <?php
 
-namespace MrArsal4u\StripeSpice\Seeders;
+namespace App\Database\Seeders;
 
 
-use Carbon\Carbon;
-use App\Models\Permission;
+
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
 use Symfony\Component\VarDumper\VarDumper;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class PermissionsSeeder extends Seeder
 {

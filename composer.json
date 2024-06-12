@@ -1,5 +1,6 @@
 {
     "name": "mr-arsal4u/spatie_spice",
+    "version": "1.0.0",
     "description": "A custom package with config files, views, JS, seeders, migrations, and models.",
     "type": "library",
     "license": "MIT",

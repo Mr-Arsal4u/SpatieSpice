@@ -8,7 +8,7 @@ use Carbon\Carbon;
 use App\Models\Module;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Spatie\Permission\Models\Permission;
+use App\Models\Permission;
 use Symfony\Component\VarDumper\VarDumper;
 
 class ModuleSeeder extends Seeder

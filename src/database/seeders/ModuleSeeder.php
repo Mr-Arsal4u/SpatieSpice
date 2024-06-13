@@ -24,7 +24,7 @@ class ModuleSeeder extends Seeder
         DB::table('modules')->truncate();
         DB::table('permissions')->truncate();
         $modules = config('modules-permission');
-        // dd($modules);
+        
         return $this->_seedTables($modules);
     }
 
@@ -32,9 +32,9 @@ class ModuleSeeder extends Seeder
     {
         $status = '';
         foreach ($modules as $name => $module) {
-            // dd($module);
+            
             $created_module = $this->_createModule($name);
-            // dd($created_module);
+            
             VarDumper::dump('Module ' . $created_module->name . ' has been created');
             if ($this->_isArrayHasModules($module)) {
                 $status = $this->_arrayOfModules($module, $created_module);

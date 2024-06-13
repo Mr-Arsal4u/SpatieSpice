@@ -30,7 +30,7 @@ class UserSeeder extends Seeder
     {
         return [
             'name'    =>  'super admin',
-            'email'   =>  'superadmin@finova.com',
+            'email'   =>  'superadmin@admin.com',
             'password'   =>  Hash::make('root@123'),
         ];
     }

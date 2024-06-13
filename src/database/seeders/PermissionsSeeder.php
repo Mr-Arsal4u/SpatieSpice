@@ -18,7 +18,7 @@ class PermissionsSeeder extends Seeder
     public function run()
     {
         $config = config('role-permissions');
-        // dd($config);
+        
         $roles = $config['roles-set'];
         
         foreach ($roles as $role => $value) {

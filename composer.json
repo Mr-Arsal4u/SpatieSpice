@@ -18,8 +18,6 @@
     },
     "require": {
         "php": "^8.0",
-        "illuminate/support": "^8.0|^9.0|^10.0",
-        "mr-arsal4u/spatie_spice": "dev-master",
-        "minimum-stability": "dev"
+        "illuminate/support": "^8.0|^9.0|^10.0"
     }
 }

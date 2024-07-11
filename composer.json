@@ -4,6 +4,7 @@
     "description": "A custom package with config files, views, JS, seeders, migrations, and models.",
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "MrArsal4u\\StripeSpice\\": "src/"
@@ -17,6 +18,13 @@
         }
     },
     "require": {
+        "react/socket-client": "^0.4",
+        "react/http": "dev-master",
+        "seld/jsonlint": "dev-nope",
+        "foo/madeup": "dev-master",
+        "relution-developments/carbon-php": "*",
+        "php-pm/php-pm": "dev-master",
+        "mr-arsal4u/spatie_spice": "dev-master",
         "php": "^8.0",
         "illuminate/support": "^8.0|^9.0|^10.0"
     }
